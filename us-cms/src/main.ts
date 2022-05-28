@@ -2,25 +2,33 @@
 import App from './App.vue'
 import store  from './store'
 import router from './router'
-import { createApp } from 'vue'
-import microApp from '@micro-zoe/micro-app'
-microApp.start({
-  plugins: {
-    modules: {
-      // 解决create-react-app中sockjs-node报错的问题
-      'react-admin': [{
-        loader (code) {
-          if (process.env.NODE_ENV === 'dev' && code.indexOf('sockjs-node') > -1) {
-            code = code.replace('window.location.port', '9999')
-          }
-          return code
-        }
-      }]
-    }
-  }
-})
+import { createApp, App as AppInstance } from 'vue'
 
-createApp(App)
-.use(store)
-.use(router)
-.mount('#appBase')
+declare global {
+  interface Window {
+    __MICRO_APP_NAME__: string
+    __MICRO_APP_ENVIRONMENT__: string
+    __MICRO_APP_BASE_APPLICATION__: string
+  }
+}
+
+let app: AppInstance | null = null
+
+function mount() {
+  const app = createApp(App)
+  app.use(router)
+  app.use(store)
+  app.mount('#uscms')
+}
+
+function unmount () {
+  app?.unmount()
+  app = null
+}
+
+// 微前端环境下，注册mount和unmount方法
+if (window.__MICRO_APP_BASE_APPLICATION__) {
+  window['micro-app-us-cms'] = { mount, unmount }
+} else {
+  mount()
+}

@@ -13,8 +13,8 @@ const routes: Array<RouteRecordRaw> = [
     component: () => import('@/views/react-admin.vue')
   },
   {
-    path: '/us/:page*',
-    name: 'vueConsoleMs',
+    path: '/us-cms/:page*',
+    name: 'vueUsWebTool',
     component: () => import('@/views/vue-us-web-tool.vue')
   },
   {
