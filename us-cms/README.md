@@ -38,6 +38,7 @@ yarn run build
     遇见最美的惊喜！
 
 ## 目录结构
+```
 |-- public                    # 静态文件夹
 |   |-- lib                   # 静态资源                            
 |   |-- logo.png              # 项目logo
@@ -55,4 +56,4 @@ yarn run build
 |-- package.json              # 项目基本信息
 |-- vue.config.js             # 配置文件
 |-- index.html                # 入口页面
-
+```
