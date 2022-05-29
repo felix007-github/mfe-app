@@ -1,6 +1,6 @@
 const { join } = require('path')
 const { defineConfig } = require('@vue/cli-service')
-const port = 9001;
+const port = 9002;
 module.exports = defineConfig({
   publicPath: '/us-cms/',
   outputDir: 'dist',

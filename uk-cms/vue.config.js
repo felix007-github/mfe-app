@@ -1,4 +1,4 @@
-const port = 9002;
+const port = 9001;
 module.exports = {
   publicPath: '/uk-cms/',
   outputDir: 'dist',

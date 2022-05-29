@@ -1,17 +1,17 @@
 <template>
   <div class="home-page">
     <div class="app-box">
-      <div class="item-data" @click="toLinkPage('/react-admin')">
-        <div><img src="@/assets/timg.png" alt=""></div>
-        react-admin
+      <div class="item-data" @click="toLinkPage('/uk-cms')">
+        <div><img src="@/assets/images/logo_top.png" alt=""></div>
+        uk-cms
       </div>
       <div class="item-data" @click="toLinkPage('/us-cms')">
         <div><img src="@/assets/images/Bia.png" alt=""></div>
         us-cms
       </div>
-      <div class="item-data" @click="toLinkPage('/uk-cms')">
-        <div><img src="@/assets/images/logo_top.png" alt=""></div>
-        uk-cms
+      <div class="item-data" @click="toLinkPage('/react-admin')">
+        <div><img src="@/assets/timg.png" alt=""></div>
+        react-admin
       </div>
     </div>
     <div class="footer-bottom">vue3 + vite + microApp 前端微服务</div>
