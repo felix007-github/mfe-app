@@ -1,6 +1,6 @@
 # 前端微服务基座项目
 
-# Vue 3 + Vite
+# Vue 3 + Vite + typescript
 
 ### 下载依赖
 ```

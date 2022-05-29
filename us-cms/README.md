@@ -1,4 +1,4 @@
-# vue中台项目模版
+# vue3 + typescript + element-plus + vue-cli
 
 ## Project init 下载依赖
 ```

@@ -1,4 +1,4 @@
-# vue中台项目模版
+# vue2 + javascript + element + vue-cli3
 
 ## Project init 下载依赖
 ```
