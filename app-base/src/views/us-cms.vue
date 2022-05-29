@@ -4,6 +4,7 @@
       name='us-cms'
       :url='url'
       :data='microAppData'
+      baseroute='/us-cms'
       @created='handleCreate'
       @beforemount='handleBeforeMount'
       @mounted='handleMount'
@@ -17,9 +18,6 @@
 <script lang="ts">
 import config from '@/utils/config'
 import { reactive, toRefs, getCurrentInstance } from "vue";
-import { EventCenterForMicroApp } from '@micro-zoe/micro-app'
-// @ts-ignore 因为vite子应用关闭了沙箱，我们需要为子应用appname-vite创建EventCenterForMicroApp对象来实现数据通信
-window.eventCenterForAppNameVite = new EventCenterForMicroApp('us-cms')
 export default {
   name: 'us-cms',
   setup() {

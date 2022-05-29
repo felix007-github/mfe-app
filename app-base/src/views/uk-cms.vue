@@ -4,6 +4,7 @@
       name='uk-cms'
       :url='url'
       :data='microAppData'
+      baseroute='/uk-cms'
       @created='handleCreate'
       @beforemount='handleBeforeMount'
       @mounted='handleMount'

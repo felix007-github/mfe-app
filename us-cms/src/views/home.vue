@@ -4,6 +4,8 @@
       :canShow="true"
       :msg="'vue3 + vite + microApp 微服务项目尝试'"
     ></hello-world>
+    <el-button type="danger" round>Danger</el-button>
+    <el-icon><Coin /></el-icon>
   </div>
 </template>
 
@@ -21,7 +23,9 @@ export default {
       myData: '12321313'
     })
     const methods = {
-
+      todolist() {
+        console.log(that)
+      }
     }
     return {
       ...toRefs(state),
@@ -31,8 +35,12 @@ export default {
 }
 </script>
 
-<style lang="less" scoped>
+<style lang="scss" scoped>
 .vue-web-tool-uk{
   text-align: center;
+  width: 100%;
+  height: 100vh;
+  background-color:#f0f2f5;
+  background-image: url('@/assets/images/TVbg.svg');
 }
 </style>

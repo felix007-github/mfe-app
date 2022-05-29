@@ -3,8 +3,8 @@
     <micro-app
       name='react-admin'
       :url='url'
-      baseroute='/react-admin'
       :data='microAppData'
+      baseroute='/react-admin'
       @created='handleCreate'
       @beforemount='handleBeforeMount'
       @mounted='handleMount'

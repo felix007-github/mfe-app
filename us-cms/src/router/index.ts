@@ -1,10 +1,9 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
 
-
 const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
-    redirect: { name: 'home' }
+    redirect: '/home'
   },
   {
     path: '/home',
@@ -14,11 +13,8 @@ const routes: Array<RouteRecordRaw> = [
 ]
 
 const router = createRouter({
-  // createWebHashHistory hash 路由
-  // createWebHistory history 路由
-  // createMemoryHistory 带缓存 history 路由
-  routes,
-  history: createWebHistory(import.meta.env.VITE_BASE_ROUTER)
+  history: createWebHistory(process.env.BASE_URL),
+  routes
 })
 
 export default router

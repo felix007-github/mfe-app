@@ -1,20 +1,23 @@
-# 前端微服务基座项目
+# vue中台项目模版
 
-# Vue 3 + Vite
-
-### 下载依赖
+## Project init 下载依赖
 ```
 yarn install
 ```
 
 ### 启动项目
 ```
-yarn run dev
+yarn run serve
 ```
 
 ### 打包 production 环境
 ```
 yarn run build
+```
+
+### 打包测试 tests 环境
+```
+yarn run test
 ```
 
 ## 代码风格
@@ -39,21 +42,24 @@ yarn run build
 
 ## 目录结构
 ```
-|-- public                    # 静态文件夹
-|   |-- lib                   # 静态资源                            
-|   |-- logo.png              # 项目logo
-|-- src                       # 源码目录
+|-- public                    # 静态文件夹                                   
+|   |-- favicon.ico                
+|   |-- index.html            #入口页面
+|-- src                       # 源码目录         
 |   |--assets                 # 模块资源
 |   |--components             # vue公共组件
-|   |--views                  # 项目页面
+|   |--views                         
 |   |--router                 # 路由配置
 |   |--store                  # 状态管理
 |   |--App.vue                # 页面入口文件
 |   |--main.js                # 入口文件，加载公共组件
-|-- .env.dev                  # 开发环境
-|-- .env.prod                 # 生产环境
-|-- vite.config.js            # vite 配置                        
-|-- package.json              # 项目基本信息
-|-- vue.config.js             # 配置文件
-|-- index.html                # 入口页面
+|-- .env.development          # 开发环境    
+|-- .env.production           # 生产环境       
+|-- .env.test                 # 测试环境  
+|-- .eslintrc.js              # ES-lint校验                   
+|-- .gitignore                # git忽略上传的文件格式   
+|-- babel.config.js           # babel语法编译                        
+|-- package.json              # 项目基本信息 
+|-- postcss.config.js         # CSS预处理器(此处默认启用autoprefixer)
+|-- vue.config.js             # 配置文件 
 ```
