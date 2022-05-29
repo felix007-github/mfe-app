@@ -1,5 +1,4 @@
 const port = 9002;
-const assetsPath = process.env.NODE_ENV === 'production' ? '/uk-cms/' : `http://localhost:${port}/uk-cms/`;
 module.exports = {
   publicPath: '/uk-cms/',
   outputDir: 'dist',
@@ -39,36 +38,5 @@ module.exports = {
       library: "uk-cms",
       libraryTarget: "umd"
     }
-  },
-  chainWebpack: (config) => {
-    config.module
-      .rule('fonts')
-      .use('url-loader')
-      .loader('url-loader')
-      .options({
-        limit: 4096, // 小于4kb将会被打包成 base64
-        fallback: {
-          loader: 'file-loader',
-          options: {
-            name: 'fonts/[name].[hash:8].[ext]',
-            publicPath: assetsPath,
-          },
-        },
-      })
-      .end();
-    config.module
-      .rule('images')
-      .use('url-loader')
-      .loader('url-loader')
-      .options({
-        limit: 4096, // 小于4kb将会被打包成 base64
-        fallback: {
-          loader: 'file-loader',
-          options: {
-            name: 'img/[name].[hash:8].[ext]',
-            publicPath: assetsPath,
-          },
-        },
-      });
   }
 }

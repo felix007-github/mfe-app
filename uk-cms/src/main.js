@@ -31,8 +31,6 @@ function mount() {
   handleMicroData()
 }
 
-
-
 function unmount() {
   instance.$destroy();
   instance.$el.innerHTML = '';
@@ -41,6 +39,8 @@ function unmount() {
 
 // 微前端环境下，注册mount和unmount方法
 if (window.__MICRO_APP_ENVIRONMENT__) {
+  // eslint-disable-next-line no-undef
+  __webpack_public_path__ = window.__MICRO_APP_PUBLIC_PATH__
   window[`micro-app-${window.__MICRO_APP_NAME__}`] = { mount, unmount }
 } else {
   // 非微前端环境直接渲染
