@@ -15,8 +15,6 @@ async function handleMicroData () {
     window.microApp.addDataListener((data) => {
       console.log('addDataListener:', data);
     })
-  } else {
-    await import('./assets/style/base.css')
   }
 }
 

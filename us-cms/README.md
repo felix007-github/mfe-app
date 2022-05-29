@@ -52,14 +52,12 @@ yarn run test
 |   |--router                 # 路由配置
 |   |--store                  # 状态管理
 |   |--App.vue                # 页面入口文件
-|   |--main.js                # 入口文件，加载公共组件
-|-- .env.development          # 开发环境    
-|-- .env.production           # 生产环境       
-|-- .env.test                 # 测试环境  
+|   |--main.ts                # 入口文件，加载公共组件
 |-- .eslintrc.js              # ES-lint校验                   
 |-- .gitignore                # git忽略上传的文件格式   
 |-- babel.config.js           # babel语法编译                        
 |-- package.json              # 项目基本信息 
-|-- postcss.config.js         # CSS预处理器(此处默认启用autoprefixer)
+|-- shims-vue.d.ts            # ts识别vue配置
+|-- tsconfig.json             # ts配置
 |-- vue.config.js             # 配置文件 
 ```

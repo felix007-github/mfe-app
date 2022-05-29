@@ -1,5 +1,3 @@
-@import 'mixin.less';
-
 a,
 a:hover,
 a:active,
@@ -12,8 +10,6 @@ a:focus {
   background: none;
   text-decoration: none;
 }
-
-//---------滚动条样式------------
 ::-webkit-scrollbar {
   width: 5px;
   height: 5px;
@@ -24,7 +20,6 @@ a:focus {
 }
 
 ::-webkit-scrollbar-thumb {
-  //滚动条
   border-radius: 5px;
   background-color: #b9b3b3;
   background-clip: padding-box;
@@ -33,17 +28,4 @@ a:focus {
 
 ::-webkit-scrollbar-thumb:hover {
   background-color: #8d8888;
-}
-
-body {
-  .el-menu-item-group__title {
-    display: none;
-  }
-  .screen-xl{
-    width: 100%;
-    height: 100%;
-    box-sizing: border-box;
-    overflow-y: auto;
-    overflow-x: hidden;
-  }
 }

@@ -1,6 +1,6 @@
 <template>
   <div class="hellow-world">
-    <img alt="Vue logo" src="../assets/images/Bia.png" />
+    <img alt="Vue logo" src="@/assets/images/Bia.png" />
     <h1>{{ msg }}</h1>
     <div class="box-btn" @click="emitData">emit num</div>
     <hello-world v-if="canShow" :msg="'vue3 + vite + microApp 微服务项目尝试'"></hello-world>
