@@ -28,8 +28,7 @@ export default defineConfig((command)=> {
     })],
     resolve: {
       alias:{
-        "@": resolve("src"),
-        "@c":resolve("src/components"),
+        "@": resolve("src")
       }
     }
   }

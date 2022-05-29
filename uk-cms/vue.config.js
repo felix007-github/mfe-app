@@ -1,4 +1,5 @@
 const port = 9001;
+const { join } = require('path')
 module.exports = {
   publicPath: '/uk-cms/',
   outputDir: 'dist',
@@ -33,6 +34,12 @@ module.exports = {
     loaderOptions: {},
   },
   configureWebpack: {
+    resolve: {
+      alias:{
+        "@": join(__dirname, 'src'),
+        "@c": join(__dirname, 'src/components'),
+      }
+    },
     output: {
       //资源打包路径
       library: "uk-cms",
