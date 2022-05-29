@@ -7,11 +7,11 @@
       </div>
       <div class="item-data" @click="toLinkPage('/us-cms')">
         <div><img src="@/assets/images/Bia.png" alt=""></div>
-        us-legislation-cms
+        us-cms
       </div>
-      <div class="item-data" @click="toLinkPage('/uk')">
+      <div class="item-data" @click="toLinkPage('/uk-cms')">
         <div><img src="@/assets/images/logo_top.png" alt=""></div>
-        uk-legislation-cms
+        uk-cms
       </div>
     </div>
     <div class="footer-bottom">vue3 + vite + microApp 前端微服务</div>

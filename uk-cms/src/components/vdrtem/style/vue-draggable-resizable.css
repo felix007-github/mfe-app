@@ -1,0 +1,88 @@
+.vdr {
+  border: none;
+  touch-action: none;
+  position: absolute;
+  box-sizing: border-box;
+  transition: all ease-in-out 0.15s;
+}
+.vdr:hover{
+  transition: none;
+}
+.handle {
+  position: absolute;
+  z-index: 100;
+  width: 14px !important;
+  height: 14px !important;
+  right: 5px !important;
+  bottom: 5px !important;
+  box-sizing: border-box;
+  background: url('./pic/dropdown-r.svg') no-repeat;
+  background-size: 100% 100%;
+}
+.handle.handle-s{
+  right: 2px !important;
+  bottom: 2px !important;
+  cursor: se-resize;
+  background: url('./pic/dropdown-s.svg') no-repeat;
+}
+.handle-tl {
+  top: -5px;
+  left: -5px;
+  cursor: nw-resize;
+}
+.handle-tm {
+  top: -5px;
+  left: calc(50% - 4px);
+  cursor: n-resize;
+}
+.handle-tr {
+  top: -5px;
+  right: -5px;
+  cursor: ne-resize;
+}
+.handle-ml {
+  top: calc(50% - 4px);
+  left: -5px;
+  cursor: w-resize;
+}
+.handle-mr {
+  top: calc(50% - 4px);
+  right: -5px;
+  cursor: e-resize;
+}
+.handle-bl {
+  bottom: -5px;
+  left: -5px;
+  cursor: sw-resize;
+}
+.handle-bm {
+  bottom: -5px;
+  left: calc(50% - 4px);
+  cursor: s-resize;
+}
+.handle-br {
+  bottom: -5px;
+  right: -5px;
+  cursor: se-resize;
+}
+.ref-line{
+  position: absolute;
+  background-color: #409eff;
+  z-index: 9999;
+}
+.v-line{
+  width: 1px;
+}
+.h-line{
+  height: 1px;
+}
+@media only screen and (max-width: 768px) {
+  [class*="handle-"]:before {
+    content: '';
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    top: -10px;
+    position: absolute;
+  }
+}

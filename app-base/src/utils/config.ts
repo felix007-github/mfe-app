@@ -3,6 +3,7 @@
 let config: { baseUrl: string, [otherKey: string]: string }
 config = {
   uscms: 'http://localhost:9001',
+  ukcms: 'http://localhost:9002',
   reactAdmin: 'http://localhost:9999',
   baseUrl: import.meta.env.VITE_BASE_URL
 }

@@ -15,12 +15,12 @@ const routes: Array<RouteRecordRaw> = [
   {
     path: '/us-cms/:page*',
     name: 'vueUsWebTool',
-    component: () => import('@/views/vue-us-web-tool.vue')
+    component: () => import('@/views/us-cms.vue')
   },
   {
-    path: '/uk/:page*',
+    path: '/uk-cms/:page*',
     name: 'vueUkWebTool',
-    component: () => import('@/views/vue-uk-web-tool.vue')
+    component: () => import('@/views/uk-cms.vue')
   }
 ]
 
