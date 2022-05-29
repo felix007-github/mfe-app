@@ -1,7 +1,7 @@
 const port = 9002;
-const assetsPath = process.env.NODE_ENV === 'production' ? '/uk-cms/' : `http://localhost:${port}/`;
+const assetsPath = process.env.NODE_ENV === 'production' ? '/uk-cms/' : `http://localhost:${port}/uk-cms/`;
 module.exports = {
-  publicPath: '/',
+  publicPath: '/uk-cms/',
   outputDir: 'dist',
   productionSourceMap: false, // 生产环境的 source map
   lintOnSave: false,// eslint-loader 是否在保存的时候检查 安装@vue/cli-plugin-eslint有效
