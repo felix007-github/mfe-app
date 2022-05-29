@@ -39,7 +39,7 @@ export default defineComponent({
   width: 100%;
   height: 100vh;
   background-color:#f0f2f5;
-  background-image: url('~@/assets/images/TVbg.svg');
+  background-image: url('@/assets/images/TVbg.svg');
   .app-box{
     position: fixed;
     top: 25%;
