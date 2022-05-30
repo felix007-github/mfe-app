@@ -12,6 +12,7 @@
       "dom.iterable",
       "scripthost"
     ],
+    "removeComments": true,
     "experimentalDecorators": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
