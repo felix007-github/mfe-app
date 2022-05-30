@@ -2,11 +2,10 @@ import App from './App.vue'
 import store  from './store'
 import router from './router'
 import ElementPlus from 'element-plus'
-import 'element-plus/dist/index.css'
-
 import { createApp, App as AppInstance } from 'vue'
 import * as ElementPlusIconsVue from '@element-plus/icons-vue'
-
+// 全局引入样式
+import 'element-plus/dist/index.css'
 declare global {
   interface Window {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -18,7 +17,7 @@ declare global {
 }
 
 // 与基座的数据交互
-async function handleMicroData () {
+function handleMicroData(): void {
   // 是否是微前端环境
   if (window.__MICRO_APP_ENVIRONMENT__) {
     // 主动获取基座下发的数据
@@ -33,7 +32,7 @@ async function handleMicroData () {
 
 let app: AppInstance | null = null
 
-function mount() {
+function mount(): void {
   const app = createApp(App)
   app.use(router)
   app.use(store)
@@ -46,7 +45,7 @@ function mount() {
   handleMicroData()
 }
 
-function unmount () {
+function unmount(): void {
   app?.unmount()
   app = null
 }

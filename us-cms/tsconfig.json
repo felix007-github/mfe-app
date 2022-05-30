@@ -1,5 +1,17 @@
 {
+  // compilerOptions 编译器的选项
   "compilerOptions": {
+    // target 用来指定ts被编译为es的版本 es3 es5 es6 es2015 esnext 表示最新版本的js
+    "target": "esnext",
+    // 指定要使用的模块化的标准
+    "module": "esnext",
+    // lib 用来指定项目中要使用的库
+    "lib": [
+      "esnext",
+      "dom",
+      "dom.iterable",
+      "scripthost"
+    ],
     "experimentalDecorators": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
@@ -7,8 +19,6 @@
     "forceConsistentCasingInFileNames": true,
     "useDefineForClassFields": true,
     "sourceMap": true,
-    "target": "esnext",
-    "module": "esnext",
     "strict": false,
     "jsx": "preserve",
     "moduleResolution": "node",
@@ -19,22 +29,20 @@
     "paths": {
       "@/*": [
         "src/*"
+      ],
+      "@c/*":[
+        "src/components/*"
       ]
-    },
-    "lib": [
-      "esnext",
-      "dom",
-      "dom.iterable",
-      "scripthost"
-    ]
+    }
   },
   "include": [
     "src/**/*.ts",
     "src/**/*.tsx",
     "src/**/*.vue",
     "tests/**/*.ts",
-    "tests/**/*.tsx"
-, "shims-vue.d.ts"  ],
+    "tests/**/*.tsx", 
+    "shims-vue.d.ts"
+  ],
   "exclude": [
     "node_modules"
   ]
