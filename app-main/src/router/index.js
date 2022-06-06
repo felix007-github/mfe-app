@@ -16,24 +16,14 @@ const routes = [
     component: () => import('../pages/react-admin.vue')
   },
   {
-    path: '/vue-console-ms*',
-    name: 'vueConsoleMs',
-    component: () => import('../pages/vue-console-ms.vue')
-  },
-  // {
-  //   path: '/uk*',
-  //   name: 'vueUkWebTool',
-  //   component: () => import('../pages/vue-uk-web-tool.vue')
-  // },
-  {
-    path: '/us*',
+    path: '/us-cms*',
     name: 'vueUsWebTool',
     component: () => import('../pages/vue-us-web-tool.vue')
   },
   {
-    path: '/uktemplate*',
-    name: 'uktemplate',
-    component: () => import('../pages/vue-uk-template.vue')
+    path: '/uk-cms*',
+    name: 'vueUkWebTool',
+    component: () => import('../pages/vue-uk-web-tool.vue')
   }
 ]
 

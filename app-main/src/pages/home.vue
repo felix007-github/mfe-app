@@ -5,21 +5,13 @@
         <div><img src="~@/assets/images/timg.png" alt=""></div>
         react-admin
       </div>
-      <div class="item-data" @click="toLinkPage('/vue-console-ms')">
-        <div><img src="~@/assets/images/Bia.png" alt=""></div>
-        vue-console-ms
-      </div>
-      <div class="item-data" @click="toLinkPage('/uk/task-center')">
+      <div class="item-data" @click="toLinkPage('/us')">
         <div><img src="~@/assets/images/logo_top.png" alt=""></div>
-        uk-web-tool
+        us-cms
       </div>
-      <div class="item-data" @click="toLinkPage('/us/task-center')">
+      <div class="item-data" @click="toLinkPage('/uk')">
         <div><img src="~@/assets/images/logo_top.png" alt=""></div>
-        us-web-tool
-      </div>
-      <div class="item-data" @click="toLinkPage('/uktemplate')">
-        <div><img src="~@/assets/images/logo_top.png" alt=""></div>
-        ul-template
+        us-cms
       </div>
     </div>
   </div>

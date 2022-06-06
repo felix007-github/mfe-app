@@ -1,11 +1,9 @@
 
 // 开发环境地址
 const config = {
+  ukcms: 'http://localhost:9001',
+  uscms: 'http://localhost:9002',
   reactAdmin: 'http://localhost:9999',
-  vueConsoleMs: 'http://localhost:9998',
-  vueUkWebTool: 'http://localhost:8887',
-  vueUsWebTool: 'http://localhost:8886',
-  uktemplate: 'http://localhost:8080'
 }
 
 // 线上环境地址
