@@ -2,7 +2,8 @@
 
 ## 目录结构
 ```
-|-- app-base               # 项目基座
-|-- uk-cms                 # uk项目
-|-- us-cms                 # us项目
+|-- app-base               # 项目基座 vite
+|-- app-main               # 项目基座 vue2
+|-- vue2-cms               # 子项目基于 vue2
+|-- vue3-cms               # 子项目基于 vue3
 ```

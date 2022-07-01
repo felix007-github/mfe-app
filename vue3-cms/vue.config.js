@@ -12,6 +12,16 @@ module.exports = defineConfig({
     headers: {
       'Access-Control-Allow-Origin': '*',
     },
+    proxy: {
+      "/api": {
+        target: "http://172.29.80.13:8000/",
+        changeOrigin: true,
+        pathRewrite: {
+          // 重写请求路径上匹配到的字段，如果不需要在请求路径上，重写为""
+          "^/api": "",
+        },
+      }
+    }
   },
   
   lintOnSave: false,
