@@ -1,29 +1,22 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '../pages/home.vue'
-
 Vue.use(VueRouter)
 
 const routes = [
   {
     path: '/',
     name: 'home',
-    component: Home
+    component: () => import('@/pages/a-home.vue')
   },
   {
-    path: '/react-admin*',
-    name: 'reactAdmin',
-    component: () => import('../pages/react-admin.vue')
+    path: '/uk*',
+    name: 'ukLegislationCms',
+    component: () => import('@/pages/uk-legislation-cms.vue')
   },
   {
     path: '/us-cms*',
-    name: 'vueUsWebTool',
-    component: () => import('../pages/vue-us-web-tool.vue')
-  },
-  {
-    path: '/uk-cms*',
-    name: 'vueUkWebTool',
-    component: () => import('../pages/vue-uk-web-tool.vue')
+    name: 'usLegislationCms',
+    component: () => import('@/pages/us-legislation-cms.vue')
   }
 ]
 

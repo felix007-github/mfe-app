@@ -1,0 +1,45 @@
+.login-page{
+  .top-legislation-logo{
+    font-size: 21px;
+    padding-top: 55px;
+    margin-bottom: 55px;
+    img{
+      height: 36px;
+      margin-right: 10px;
+    }
+  }
+  .form-item{
+    width: 320px;
+    height: 68px;
+    margin: 0 auto;
+    >p{
+      color: $red;
+      font-size: 14px;
+      text-align: left;
+      margin-top: 3px;
+    }
+    .isred :deep(.el-input__wrapper) {
+      border: 1px solid $red;
+    }
+  }
+  .form-item.tip {
+    font-size: 12;
+    text-align: center;
+    p {
+      margin: 0;
+      color: #8c8c8c;
+      font-weight: 100;
+      padding: 0.02rem 0;
+      text-align: center;
+      > a {
+        color: $blue;
+      }
+    }
+  }
+  .form-item.login-btn{
+    margin-top: 10px;
+    .el-button {
+      width: 100%;
+    }
+  }
+}

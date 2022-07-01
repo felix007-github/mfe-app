@@ -1,42 +1,53 @@
-const { join } = require('path')
-const { defineConfig } = require('@vue/cli-service')
-const port = 9002;
+const { join } = require("path");
+const { defineConfig } = require("@vue/cli-service")
+const Components = require("unplugin-vue-components/webpack");
+const { ElementPlusResolver } = require("unplugin-vue-components/resolvers");
+
+const port = 8886;
 module.exports = defineConfig({
-  publicPath: '/us-cms/',
-  outputDir: 'dist',
+  publicPath: "/",
+  outputDir: "dist",
   transpileDependencies: true,
   productionSourceMap: false,
   devServer: {
     port,
     open: false,
     headers: {
-      'Access-Control-Allow-Origin': '*',
+      "Access-Control-Allow-Origin": "*"
     },
     proxy: {
       "/api": {
-        target: "http://172.29.80.13:8000/",
+        target: "https://legislation-us-dev.aicat.me/",
         changeOrigin: true,
         pathRewrite: {
-          // 重写请求路径上匹配到的字段，如果不需要在请求路径上，重写为""
-          "^/api": "",
-        },
+          "^/api": "/api",
+        }
       }
     }
   },
-  
-  lintOnSave: false,
-  // 自定义webpack配置
-  configureWebpack: {
-    resolve: {
-      alias:{
-        "@": join(__dirname, 'src'),
-        "@c": join(__dirname, 'src/components'),
+  css: {
+    loaderOptions: {
+      sass: {
+        additionalData: `@use "~@/assets/styles/mixin.scss" as *;`
       }
     },
+  },
+  lintOnSave: false,
+  configureWebpack: {
+    resolve: {
+      alias: {
+        "@": join(__dirname, "src"),
+        "@c": join(__dirname, "src/components"),
+      },
+    },
     output: {
-      //资源打包路径
-      library: "us-cms",
+      library: "us_legislation_cms_app",
       libraryTarget: "umd"
-    }
+    },
+    plugins: [
+      Components({
+        resolvers: [ElementPlusResolver()],
+      })
+    ]
   }
-})
+});

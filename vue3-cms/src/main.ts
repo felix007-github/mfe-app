@@ -1,60 +1,65 @@
-import App from './App.vue'
-import store  from './store'
-import router from './router'
-import ElementPlus from 'element-plus'
-import { createApp, App as AppInstance } from 'vue'
-import * as ElementPlusIconsVue from '@element-plus/icons-vue'
-// 全局引入样式
-import 'element-plus/dist/index.css'
+/* eslint-disable @typescript-eslint/no-explicit-any */
+import App from "./App.vue";
+import store from "./store";
+import router from "./router";
+import { Router } from "vue-router";
+import microApp from "@micro-zoe/micro-app";
+import { notifyMsg } from "./components/Message";
+import { createApp, App as AppInstance } from "vue";
+import * as ElementPlusIconsVue from "@element-plus/icons-vue";
+
+// 样式文件
+import 'nprogress/nprogress.css'
+import "./assets/styles/index.scss";
+
+// microApp注入一个自定义标签
+microApp.start({
+  tagName: "micro-app-lib"
+})
+
 declare global {
   interface Window {
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    microApp: any
-    __MICRO_APP_NAME__: string
-    __MICRO_APP_PUBLIC_PATH__: string
-    __MICRO_APP_ENVIRONMENT__: string
+    moment: any;
+    microApp: any;
+    __MICRO_APP_NAME__: string;
+    __MICRO_APP_PUBLIC_PATH__: string;
+    __MICRO_APP_ENVIRONMENT__: string;
   }
 }
 
-// 与基座的数据交互
 function handleMicroData(): void {
-  // 是否是微前端环境
   if (window.__MICRO_APP_ENVIRONMENT__) {
-    // 主动获取基座下发的数据
-    console.log('getData:', window.microApp.getData());
-    // 监听基座下发的数据变化
     window.microApp.addDataListener((data) => {
-      console.log('addDataListener:', data);
-    })
+      console.log("addDataListener:", data);
+    });
   }
 }
 
-
-let app: AppInstance | null = null
-
+let app: AppInstance | null = null;
+let routers: Router | null = null;
 function mount(): void {
-  const app = createApp(App)
-  app.use(router)
-  app.use(store)
-  // 全局注册element-plus icon图标组件
+  app = createApp(App);
+  routers = router;
+  app.use(routers);
+  app.use(store);
   for (const key of Object.keys(ElementPlusIconsVue)) {
-    app.component(key, ElementPlusIconsVue[key])
+    app.component(key, ElementPlusIconsVue[key]);
   }
-  app.use(ElementPlus)
-  app.mount('#uscms')
-  handleMicroData()
+  // 自定义消息弹出框
+  app.config.globalProperties.$notifyMsg = notifyMsg;
+  app.mount("#us_legislation_cms_app");
+  handleMicroData();
 }
 
 function unmount(): void {
-  app?.unmount()
-  app = null
+  app?.unmount();
+  app = null;
+  routers = null;
 }
 
-// 微前端环境下，注册mount和unmount方法
 if (window.__MICRO_APP_ENVIRONMENT__) {
-  __webpack_public_path__ = window.__MICRO_APP_PUBLIC_PATH__
-  window[`micro-app-${window.__MICRO_APP_NAME__}`] = { mount, unmount }
+  __webpack_public_path__ = window.__MICRO_APP_PUBLIC_PATH__;
+  window[`micro-app-${window.__MICRO_APP_NAME__}`] = { mount, unmount };
 } else {
-  // 非微前端环境直接渲染
-  mount()
+  mount();
 }

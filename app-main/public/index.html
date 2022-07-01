@@ -4,16 +4,25 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link rel="icon" href="<%= BASE_URL %>timg.png">
+    <link rel="icon" href="<%= BASE_URL %>logo.png">
     <link rel="stylesheet" href="<%= BASE_URL %>lib/base.css" global>
-    <link rel="stylesheet" href="<%= BASE_URL %>lib/common.css" global>
     <title><%= htmlWebpackPlugin.options.title %></title>
   </head>
   <body>
     <noscript>
       <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
     </noscript>
-    <div id="appBase"></div>
-    <!-- built files will be auto injected -->
+    <div id="appBase">
+      <div id="loader-wrapper" class="flex row row-center col-center">
+        <div id="mainloader" class="loader">
+          <div class="loader-inner ball-pulse flex row row-center">
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+        </div>
+        <div class="load_title">正在加载系统资源，请稍后… </div>
+      </div>
+    </div>
   </body>
 </html>

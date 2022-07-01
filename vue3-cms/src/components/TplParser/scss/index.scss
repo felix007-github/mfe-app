@@ -1,0 +1,87 @@
+.cell-bold-text{
+  color: #00172E;
+  font-weight: 900;
+  font-size: 16px;
+}
+.row-new-box{
+  width: 42px;
+  height: 22px;
+  color: #4CAF50;
+  line-height: 22px;
+  text-align: center;
+  border-radius: 2px;
+  border: 1px solid #4CAF50;
+  background-color: #E8F5E9;
+}
+.row-inprogress-box{
+  width: 76px;
+  height: 22px;
+  color: #0288D1;
+  line-height: 22px;
+  text-align: center;
+  border-radius: 2px;
+  border: 1px solid #2196F3;
+  background-color: #E3F2FD;
+}
+.priority-box{
+  svg{
+    color: #E0E0E0;
+  }
+  .ischeck{
+    color: #EF6C00;
+  }
+}
+.action-box {
+  .el-progress{
+    margin-right: 10px;
+  }
+}
+.created-at-box{
+  color: #00172E;
+  margin-top: 5px;
+  line-height: 25px;
+}
+// Last motified
+.last-motified-box{
+  color: #00172E;
+  padding-left: 5px;
+  margin-top: 5px;
+  line-height: 25px;
+  .use-name{
+    width: 32px;
+    height: 32px;
+    color: $fc;
+    text-align: center;
+    border-radius: 50%;
+    margin-right: 10px;
+    background-color: #4DB6AC;
+  }
+}
+.lm-top-show{
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  display: none;
+  height: 100%;
+  width: 100%;
+  padding-left: 15px;
+  background-color: #FAFAFA;
+  transition: all 0.2s ease;
+  svg{
+    color: $fcb;
+    cursor: pointer;
+    margin-left: 15px;
+  }
+  svg:last-child{
+    width: 18px;
+    height: 18px;
+  }
+}
+.last-motified-box:hover {
+  .lm-top-show{
+    display: flex;
+    opacity: 1;
+  }
+}
+// --------

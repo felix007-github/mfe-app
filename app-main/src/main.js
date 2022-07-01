@@ -4,7 +4,6 @@ import router from './router/index.js'
 import microApp from '@micro-zoe/micro-app'
 
 Vue.config.productionTip = false
-
 microApp.start({
   plugins: {
     modules: {

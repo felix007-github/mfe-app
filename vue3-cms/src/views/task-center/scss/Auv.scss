@@ -1,0 +1,29 @@
+.auv-page{
+  padding: 0 25px;
+  .top-tabs-box{
+    margin-top: 10px;
+    border-bottom: 2px solid #CFD8DC;
+    padding-bottom: 10px;
+    justify-content: space-between;
+  }
+  .item-tab{
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 16px;
+  }
+  .item-tab.active{
+    color: $blue;
+  }
+  .center-line{
+    height: 25px;
+    width: 2px;
+    margin: 0 30px;
+    background-color: #BDBDBD;
+  }
+  .right-box{
+    font-size: 25px;
+    svg{
+      margin-left: 20px;
+    }
+  }
+}

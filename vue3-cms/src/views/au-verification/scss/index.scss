@@ -1,0 +1,35 @@
+.au-verification-page{
+  width: 100%;
+  height: 100vh;
+  .auv-content-main{
+    width: 100%;
+    height: calc(100% - 55px);
+    .left-content{
+      width: 60%;
+      height: 100%;
+    }
+    .task-content{
+      width: 40%;
+      height: 100%;
+      border-left: 1px solid #D6D9E0;
+      .tasklist-section{
+        width: calc(100% - 55px);
+      }
+      .right-box{
+        width: 55px;
+        box-shadow: -1px 0px 0px #CFD8DC;
+      }
+      .icon-item{
+        width: 100%;
+        margin-top: 25px;
+        height: 44px;
+        border-left: 5px solid #425EF2;
+        svg{
+          width: 30px;
+          height: 30px;
+          color: #425EF2;
+        }
+      }
+    }
+  }
+}

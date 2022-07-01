@@ -154,8 +154,7 @@ img {
   max-width: 100%;
 }
 div,p{
-  white-space:normal;
-  word-break: break-all;
+  white-space: normal;
   word-wrap: break-word;
 }
 p {
@@ -165,3 +164,68 @@ p {
 input {
   outline: none;
 }
+
+a,
+a:hover,
+a:active,
+a:visited,
+a:link,
+a:focus {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
+  background: none;
+  text-decoration: none;
+}
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track-piece {
+  background-color: #f8f8f8;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-color: #b9b3b3;
+  background-clip: padding-box;
+  min-height: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #8d8888;
+}
+
+/* public css */
+.flex{display:flex!important;box-sizing:border-box}
+.row{flex-direction:row}
+.row-center{justify-content:center}
+.col-center{align-items:center}
+#loader-wrapper{position:fixed;top:0;left:0;width:100%;height:100%;z-index:999999;background:#fff}
+#mainloader{display:block;position:relative;border-radius:50%;border:3px solid transparent;border-top-color:#FFF;z-index:1001}
+#loader-wrapper .load_title{font-size:14px;font-family:PingFangSC-Regular,PingFang SC;font-weight:400;color:rgba(145,153,169,1);width:100%;text-align:center}
+#loader:before{content:"";position:absolute;top:5px;left:5px;right:5px;bottom:5px;border-radius:50%;border:3px solid transparent;border-top-color:#FFF;animation:spin 3s linear infinite}
+#loader:after{content:"";position:absolute;top:15px;left:15px;right:15px;bottom:15px;border-radius:50%;border:3px solid transparent;border-top-color:#FFF;animation:spin 1.5s linear infinite}
+@keyframes spin{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}@keyframes spin{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
+#loader-wrapper .load_title{font-size:14px;font-family:PingFangSC-Regular,PingFang SC;font-weight:400;color:rgba(145,153,169,1);width:100%;text-align:center;z-index:9999999999999;position:absolute;top:54%;opacity:1;line-height:30px}
+#loader-wrapper .load_title span{font-weight:normal;font-style:italic;font-size:13px;color:#FFF;opacity:.5}
+@keyframes scale{0%{transform:scale(1);opacity:1}45%{transform:scale(0.1);opacity:.7}80%{transform:scale(1);opacity:1}}
+@keyframes scale{0%{transform:scale(1);opacity:1}45%{transform:scale(0.1);opacity:.7}80%{transform:scale(1);opacity:1}}
+.ball-pulse>div:nth-child(0){animation:scale .75s 0s infinite cubic-bezier(.2,.68,.18,1.08)}
+.ball-pulse>div:nth-child(1){background-color:#6437ff;animation:scale .75s .12s infinite cubic-bezier(.2,.68,.18,1.08)}
+.ball-pulse>div:nth-child(2){background-color:#ff4f52;animation:scale .75s .24s infinite cubic-bezier(.2,.68,.18,1.08)}
+.ball-pulse>div:nth-child(3){background-color:#476192;animation:scale .75s .36s infinite cubic-bezier(.2,.68,.18,1.08)}
+.ball-pulse>div{width:13px;height:13px;border-radius:100%;margin-right:13px;animation-fill-mode:both;display:inline-block}
+@keyframes ball-pulse-sync{33%{transform:translateY(10px)}66%{transform:translateY(-10px)}100%{transform:translateY(0)}}
+@keyframes ball-pulse-sync{33%{transform:translateY(10px)}66%{transform:translateY(-10px)}100%{transform:translateY(0)}}
+.ball-pulse-sync>div:nth-child(0){animation:ball-pulse-sync .6s 0s infinite ease-in-out}
+.ball-pulse-sync>div:nth-child(1){animation:ball-pulse-sync .6s .07s infinite ease-in-out}
+.ball-pulse-sync>div:nth-child(2){animation:ball-pulse-sync .6s .14s infinite ease-in-out}
+.ball-pulse-sync>div:nth-child(3){animation:ball-pulse-sync .6s .21s infinite ease-in-out}
+.ball-pulse-sync>div{background-color:#fff;width:15px;height:15px;border-radius:100%;margin:2px;animation-fill-mode:both;display:inline-block}
+@keyframes ball-scale{0%{transform:scale(0)}100%{transform:scale(1);opacity:0}}
+@keyframes ball-scale{0%{transform:scale(0)}100%{transform:scale(1);opacity:0}}
+.ball-scale>div{background-color:#fff;width:15px;height:15px;border-radius:100%;margin:2px;animation-fill-mode:both;display:inline-block;height:60px;width:60px;animation:ball-scale 1s 0s ease-in-out infinite}
+@keyframes rotate{0%{transform:rotate(0deg)}50%{transform:rotate(180deg)}100%{transform:rotate(360deg)}}
+@keyframes rotate{0%{transform:rotate(0deg)}50%{transform:rotate(180deg)}100%{transform:rotate(360deg)}};

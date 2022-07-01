@@ -1,0 +1,161 @@
+{
+  "task_center_data": [
+    {
+      "session": "2022",
+      "last_motified": "02/10/2021 8:30 AM",
+      "status": "new",
+      "hb_sb": "2020 Ind. SEA 148",
+      "priority": 1,
+      "actions": 3,
+      "action_total": 5,
+      "created_at": "02/10/2021 8:30 AM"
+    },
+    {
+      "session": "2022",
+      "last_motified": "02/10/2021 8:30 AM",
+      "status": "inprogress",
+      "hb_sb": "2020 Ind. SEA 148",
+      "priority": 1,
+      "actions": 2,
+      "action_total": 5,
+      "created_at": "02/10/2021 8:30 AM"
+    },
+    {
+      "session": "2022",
+      "last_motified": "02/10/2021 8:30 AM",
+      "status": "new",
+      "hb_sb": "2020 Ind. SEA 148",
+      "priority": 1,
+      "actions": 1,
+      "action_total": 5,
+      "created_at": "02/10/2021 8:30 AM"
+    },
+    {
+      "session": "2022",
+      "last_motified": "02/10/2021 8:30 AM",
+      "status": "new",
+      "hb_sb": "2020 Ind. SEA 148",
+      "priority": 1,
+      "actions": 1,
+      "action_total": 5,
+      "created_at": "02/10/2021 8:30 AM"
+    },
+    {
+      "session": "2022",
+      "last_motified": "02/10/2021 8:30 AM",
+      "status": "new",
+      "hb_sb": "2020 Ind. SEA 148",
+      "priority": 1,
+      "actions": 1,
+      "action_total": 5,
+      "created_at": "02/10/2021 8:30 AM"
+    },
+    {
+      "session": "2022",
+      "last_motified": "02/10/2021 8:30 AM",
+      "status": "new",
+      "hb_sb": "2020 Ind. SEA 148",
+      "priority": 1,
+      "actions": 1,
+      "action_total": 5,
+      "created_at": "02/10/2021 8:30 AM"
+    },
+    {
+      "session": "2022",
+      "last_motified": "02/10/2021 8:30 AM",
+      "status": "new",
+      "hb_sb": "2020 Ind. SEA 148",
+      "priority": 1,
+      "actions": 1,
+      "action_total": 5,
+      "created_at": "02/10/2021 8:30 AM"
+    },
+    {
+      "session": "2022",
+      "last_motified": "02/10/2021 8:30 AM",
+      "status": "new",
+      "hb_sb": "2020 Ind. SEA 148",
+      "priority": 1,
+      "actions": 1,
+      "action_total": 5,
+      "created_at": "02/10/2021 8:30 AM"
+    },
+    {
+      "session": "2022",
+      "last_motified": "02/10/2021 8:30 AM",
+      "status": "new",
+      "hb_sb": "2020 Ind. SEA 148",
+      "priority": 1,
+      "actions": 1,
+      "action_total": 5,
+      "created_at": "02/10/2021 8:30 AM"
+    },
+    {
+      "session": "2022",
+      "last_motified": "02/10/2021 8:30 AM",
+      "status": "new",
+      "hb_sb": "2020 Ind. SEA 148",
+      "priority": 1,
+      "actions": 1,
+      "action_total": 5,
+      "created_at": "02/10/2021 8:30 AM"
+    }
+  ],
+  "deta_detail": [
+    {
+      "effective_date": "2016-05-03",
+      "effect": "Tom",
+      "normcite": "No. 189, Grove St, Los Angeles",
+      "lmt": "02/10/2021",
+      "multi": "Multi"
+    },
+    {
+      "effective_date": "2016-05-03",
+      "effect": "Tom",
+      "normcite": "No. 189, Grove St, Los Angeles",
+      "status": "New"
+    },
+    {
+      "effective_date": "2016-05-03",
+      "effect": "Tom",
+      "normcite": "No. 189, Grove St, Los Angeles",
+      "lmt": "02/10/2021"
+    },
+    {
+      "effective_date": "2016-05-03",
+      "effect": "Tom",
+      "normcite": "No. 189, Grove St, Los Angeles",
+      "lmt": "02/10/2021"
+    },
+    {
+      "effective_date": "2016-05-03",
+      "effect": "Tom",
+      "normcite": "No. 189, Grove St, Los Angeles",
+      "lmt": "02/10/2021"
+    },
+    {
+      "effective_date": "2016-05-03",
+      "effect": "Tom",
+      "normcite": "No. 189, Grove St, Los Angeles",
+      "lmt": "02/10/2021"
+    },
+    {
+      "effective_date": "2016-05-03",
+      "effect": "Tom",
+      "normcite": "No. 189, Grove St, Los Angeles",
+      "lmt": "02/10/2021"
+    },
+    {
+      "effective_date": "2016-05-03",
+      "effect": "Tom",
+      "normcite": "No. 189, Grove St, Los Angeles",
+      "lmt": "02/10/2021"
+    },
+    {
+      "effective_date": "2016-05-03",
+      "effect": "Tom",
+      "normcite": "No. 189, Grove St, Los Angeles",
+      "lmt": "02/10/2021"
+    }
+  ]
+}
