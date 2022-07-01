@@ -1,7 +1,7 @@
 <template>
   <div class="tack-center-page is-flex row-center">
     <div class="left-menu">
-      <img src="@/assets/images/logo_top.png" alt="">
+      <img src="@/assets/images/logo_top.png" alt="logo" @click="tolinkHome">
       <div class="menu-item is-flex row-center col-center">
         <svg class="iconpark-icon" fill="currentColor"><use href="#tasksing"></use></svg>
         <div class="name-text">Task center</div>
@@ -40,6 +40,11 @@ export default class TaskCenter extends Vue {
   }
   viewDetail() {
     this.$refs.taskDetails.showThis()
+  }
+  tolinkHome() {
+    if (window.__MICRO_APP_ENVIRONMENT__) {
+      window.microApp.dispatch({type: 'home'});
+    }
   }
 }
 </script>

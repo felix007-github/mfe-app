@@ -60,8 +60,9 @@ export default {
     },
 
     handleDataChange (e) {
-      console.log(e)
-      this.$router.push({ path: '/uk/task-center' })
+      this.$router.push({
+        name: 'home'
+      })
     }
   }
 }
